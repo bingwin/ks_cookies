@@ -44,11 +44,11 @@ class Resource(object):
                 return ip_li
 
             else:
-                logging.warning('获取Cookie时请求的IP池为空...')
+                logger.info('获取Cookie时请求的IP池为空...')
                 time.sleep(30)
 
         except:
-            logging.warning('获取Cookie时请求IP池发生错误...')
+            logger.info('获取Cookie时请求IP池发生错误...')
             time.sleep(30)
 
     def verify_ip(self):
@@ -110,9 +110,9 @@ class Resource(object):
                 driver.get('https://live.kuaishou.com/')
                 cookies = driver.get_cookies()
                 # print(driver.page_source)
-                logging.warning(cookies)
+                logger.info(cookies)
                 if '未连接到互联网' in driver.page_source or not cookies:
-                    logging.warning('访问快手首页出现问题, 重新请求新的IP并访问...')
+                    logger.info('访问快手首页出现问题, 重新请求新的IP并访问...')
                     driver.quit()
                     pass
                     # self.get_webpage()  # 此处可能陷入死循环
@@ -125,7 +125,7 @@ class Resource(object):
                         # print(res['name'], res['value'])
                         cookie[name] = value
                     cookie_d = "{'cookie':" + str(cookie) + '}'  # 插入后还有双引号, 可能影响结果
-                    logging.warning(cookie_d)
+                    logger.info(cookie_d)
 
                     # 上传到服务器
                     self.redis_conn.lpush('ks_cookies', cookie_d)
@@ -155,9 +155,9 @@ class Resource(object):
                     self.get_webpage()
 
                 time.sleep(7)
-                logging.warning('检测代理池时间...')
+                logger.info('检测代理池时间...')
             except:
-                logging.warning('获取页面时程序发生错误 ...')
+                logger.info('获取页面时程序发生错误 ...')
                 time.sleep(30)
 
 
