@@ -83,6 +83,7 @@ class Resource(object):
                 options.add_argument('--disable-extensions')
                 options.add_argument('--disable-gpu')
 
+                logging.info('使用IP %s ...' % (proxy))
                 options.add_argument("--proxy-server=http://%s" % (proxy))
 
                 driver = webdriver.Chrome(executable_path='/home/seeta/zhangyanchao/chromedriver_install/chromedriver',
@@ -131,11 +132,13 @@ class Resource(object):
 
                     people_li = ['dagaoge666', 'meishi123458888', 'wangzulan', '3xgghwn46skhkxa', 'sanda927', 'hs1590ai', 'xiaoyiyi', '3xjb64qxiwbv2dm', 'huangbo666', 'Sanmei1997']
                     driver.get('https://live.kuaishou.com/profile/%s' % (random.choice(people_li)))
+                    logging.info('获取首页成功, 刷新页面...')
                     for i in range(2):
                         driver.refresh()
                     # 退出，清除浏览器缓存
                     time.sleep(7)
                     driver.quit()
+                    logging.info('退出浏览器 ...')
 
     def scan_verify_cookie_pool(self, cookie_pool):
 
