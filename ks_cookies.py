@@ -74,8 +74,8 @@ class Resource(object):
         if pros:
             for proxy in pros:
                 options = webdriver.ChromeOptions()
-                options.binary_location = r"D:\software_location\cent_install\CentBrowser\Application\chrome.exe"
-                # options.binary_location = '/usr/bin/google-chrome-stable'
+                # options.binary_location = r"D:\software_location\cent_install\CentBrowser\Application\chrome.exe"
+                options.binary_location = '/usr/bin/google-chrome-stable'
 
                 # Linux 环境下配置
                 options.add_argument('--headless')
