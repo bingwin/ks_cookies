@@ -136,7 +136,7 @@ class Resource(object):
                     for i in range(2):
                         driver.refresh()
                     # 退出，清除浏览器缓存
-                    time.sleep(7)
+                    time.sleep(5)
                     driver.quit()
                     logging.info('退出浏览器 ...')
 
@@ -154,10 +154,10 @@ class Resource(object):
                 if result < FILL_RESOURCE_THRESHOLD:
                     self.get_webpage()
 
-                time.sleep(10)
+                time.sleep(7)
                 logging.warning('检测代理池时间...')
             except:
-
+                logging.warning('获取页面时程序发生错误 ...')
                 time.sleep(30)
 
 
