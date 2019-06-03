@@ -53,7 +53,7 @@ INVALID_BXS_PROXY_HISTORY_POOL = 'invalid_history_bxs_proxy' # HASH
 CHECK_INVALID_POOL_CYCLE = 30
 CHECK_RESOURCE_POOL_CYCLE = 60
 TEST_RESOURCE_CYCLE = 60
-FILL_RESOURCE_THRESHOLD = 2
+FILL_RESOURCE_THRESHOLD = 10
 
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=11&time=2&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=&'
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
