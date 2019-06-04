@@ -158,7 +158,7 @@ class Resource(object):
                 logger.info('检测代理池时间...')
             except:
                 logger.info('获取页面时程序发生错误 ...')
-                time.sleep(30)
+                time.sleep(10)
 
 
 if __name__ == '__main__':

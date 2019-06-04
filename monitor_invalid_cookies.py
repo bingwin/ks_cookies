@@ -114,7 +114,7 @@ class Resource(object):
 
                             })
 
-                        people_li = ['dagaoge666', 'meishi123458888', 'lol1314666', 'travelers', 'dingdang660', 'xue66666', 'wangzulan', '3xgghwn46skhkxa', 'sanda927', 'hs1590ai', 'xiaoyiyi', '3xjb64qxiwbv2dm', 'huangbo666', 'Sanmei1997']
+                        people_li = ['dagaoge666', 'TS-J0315J', 'meishi123458888', 'lol1314666', 'travelers', 'dingdang660', 'xue66666', 'wangzulan', '3xgghwn46skhkxa', 'sanda927', 'hs1590ai', 'xiaoyiyi', '3xjb64qxiwbv2dm', 'huangbo666', 'Sanmei1997']
 
                         driver.get('https://live.kuaishou.com/profile/%s' % (random.choice(people_li)))
 
