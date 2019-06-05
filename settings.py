@@ -54,14 +54,14 @@ INVALID_BXS_PROXY_HISTORY_POOL = 'invalid_history_bxs_proxy' # HASH
 CHECK_INVALID_POOL_CYCLE = 30
 CHECK_RESOURCE_POOL_CYCLE = 60
 TEST_RESOURCE_CYCLE = 60
-FILL_RESOURCE_THRESHOLD = 10
+FILL_RESOURCE_THRESHOLD = 50000
 
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=11&time=2&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions=&'
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=1&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=1&pack=44051&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
 # PROXY_REQUEST_URL = 'http://piping.mogumiao.com/proxy/api/get_ip_bs?appKey=1eb26c3afcca421596e40c0c58f98705&expiryDate=0&format=1&newLine=2'
 # PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=11&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
-PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=11&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
+# PROXY_REQUEST_URL = 'http://webapi.http.zhimacangku.com/getip?type=2&pro=&city=0&yys=0&port=11&time=1&ts=0&ys=0&cs=0&lb=1&sb=0&pb=45&mr=1&regions='
 
 PROXY_REQUEST_CHUNK = 1
 
