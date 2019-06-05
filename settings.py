@@ -22,27 +22,28 @@ MYSQL_DB = {
   'port' : 3306
 }
 
-REDIS = {
-    'url': None,
-#     'host': 'localhost',
-    'host': '47.105.103.8',
-    'port': 56789,
-    'password': '12345678'
-    }
-
-
 # REDIS = {
 #     'url': None,
-#     'host': '172.181.217.58',
-#     'port': 6379,
+# #     'host': 'localhost',
+#     'host': '47.105.103.8',
+#     'port': 56789,
+#     'password': '12345678'
 #     }
+
+
+REDIS = {
+    'url': None,
+    'host': '172.181.217.58',
+    'port': 6379,
+    }
 
 BXS_COOKIE_POOL = 'bxs_cookies' # HASH
 MOBILE_UA_POOL = 'mobile_ua'    # LIST
 
 HTTPS_PROXY_IP_POOL = 'https_proxy' # HASH
 HTTPS_PROXY_COOKIE_POOL = 'ks_cookies'
-INVALID_KS_COOKIE_POOL = 'invalid_ks_cookies'
+INVALID_KS_COOKIE_POOL = 'ks_cookies' # TODO 0605
+# INVALID_KS_COOKIE_POOL = 'invalid_ks_cookies'
 
 BXS_RESOURCE_POOL = 'bxs_resource'  # LIST
 INVALID_BXS_RESOURCE_POOL = 'invalid_bxs_resource' # LIST
