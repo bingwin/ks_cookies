@@ -22,20 +22,20 @@ MYSQL_DB = {
   'port' : 3306
 }
 
-# REDIS = {
-#     'url': None,
-# #     'host': 'localhost',
-#     'host': '47.105.103.8',
-#     'port': 56789,
-#     'password': '12345678'
-#     }
-
-
 REDIS = {
     'url': None,
-    'host': '172.181.217.58',
-    'port': 6379,
+#     'host': 'localhost',
+    'host': '47.105.103.8',
+    'port': 56789,
+    'password': '12345678'
     }
+
+
+# REDIS = {
+#     'url': None,
+#     'host': '172.181.217.58',
+#     'port': 6379,
+#     }
 
 BXS_COOKIE_POOL = 'bxs_cookies' # HASH
 MOBILE_UA_POOL = 'mobile_ua'    # LIST

@@ -5,9 +5,9 @@ r =redis.Redis(host="127.0.0.1", port=6379)
 
 num = r.llen('invalid_ks_cookies')
 
-# for i in range(num):
-#     res = r.rpoplpush('invalid_ks_cookies', 'invalid_ks_cookies').decode()
-#     print(res)
+for i in range(num):
+    res = r.rpoplpush('invalid_ks_cookies', 'invalid_ks_cookies').decode()
+    print(res)
 
 lia = [
     "{'cookie':{'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'did': 'web_043bb82de9dd42305793157e25040ee6', 'clientid': '3'}}",
@@ -336,7 +336,47 @@ lia = [
     "{'cookie':{'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'clientid': '3', 'client_key': '65890b29', 'did': 'web_bb4c5b844f9c9986816bccff984d8c21'}}",
     "{'cookie':{'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'clientid': '3', 'client_key': '65890b29', 'did': 'web_f0ecb5ccd0c7a82e6f207e48ed2ad74c'}}",
     "{'cookie':{'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'did': 'web_8087a69fc8cd288107fbfea86b1cea0a', 'clientid': '3', 'client_key': '65890b29'}}",
-    "{'cookie':{'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'did': 'web_b15e7de7aca551c35c7527dcd69b476c', 'client_key': '65890b29', 'clientid': '3'}}",]
+    "{'cookie':{'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'did': 'web_b15e7de7aca551c35c7527dcd69b476c', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_001df7d8d0116fd7fa0fc30ad1394c60', 'client_key': '65890b29', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_001df7d8d0116fd7fa0fc30ad1394c60', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_00c8bd1526a7497f9a1236f484b1a265', 'client_key': '65890b29', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_1a33616100eff73b22619216c192f674', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_1bbbd09ffe1bb9cd6666435c0896195d', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_2bcd429fba07a22a4da0f2939bf2cab0', 'kuaishou.live.bfb1s': '7206d814e5c089a58c910ed8bf52ace5', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_2c0c580f7e26575e468cfaa5372a4809', 'kuaishou.live.bfb1s': '7206d814e5c089a58c910ed8bf52ace5', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_2d0b3a33f6375bd9f613edd386e6055b', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_38e10e8970938fb1d58b41ee84810291', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_3ae7c899cf54ed692694f60d3b06f0b3', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_4928b1ebc3e9b18578cf48eb4ce2fbc6', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_58514d8d31d27394c20697d5e6e97de7', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_58b2fd97e14104816e8cef78b2e92fa1', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_60daf641a881dc4f98f13738022eacad', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_6b20b2b704b10d974a5bf624bfee2fb0', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_6c11443bcd726a5eaa8e070391fa0e09', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_6ceaa9a53c5dfa2c6aa74e0e016d86a2', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_6f8f7ca79eebbbe4f9a139967717d0e8', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_709417f882d507775aade485a24237ac', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_8a73f2188a73d7189e69b91135d4dacf', 'client_key': '65890b29', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_8e5f792f0805bd408e76aee6b3bb47f3', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_8f03eb0b82805ca595406ed70ca65cee', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_9046d87072f533fb16c891cd946c8fad', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_9465b3596b4a024d4bdb8b4bbe0372d4', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_94967a2f5dca0ffaa4f70105537dfa91', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_94a96bff9ec39d0df6a96e07e9671f46', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_a1410830c623148b05bd8c2f3f9ead55', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_b2bc4d0663e731468d3141961630f0b7', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_b619baa21e899241088793205aab4f0a', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_bf3576f03d5f58e265421a17d224658d', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_cc4631c471998640c1d082a1f984da10', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_dc0aad0c90ffed7c474e34a044b74e71', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '477cb0011daca84b36b3a4676857e5a1', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_e1ee4f9cf27f3e988ceb39be11eb41d4', 'kuaishou.live.bfb1s': '7206d814e5c089a58c910ed8bf52ace5', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_ea05c7ab24db80ccfbb6b884aeae4278', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_ef5972975ad488584b13885eedc2bf7c', 'kuaishou.live.bfb1s': 'ac5f27b3b62895859c4c1622f49856a4', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_f08896e8f71bfdee503de3f61fef4425', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '9b8f70844293bed778aade6e0a8f9942', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_f511acf45510b48e6645e6fcbee5b9c0', 'kuaishou.live.bfb1s': '7206d814e5c089a58c910ed8bf52ace5', 'client_key': '65890b29', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_f5d6371968e22267b4b73c59196d4fa3', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '7206d814e5c089a58c910ed8bf52ace5', 'clientid': '3'}}",
+"{'cookie': {'did': 'web_f94b14da747497f9da0b1fc21390881c', 'client_key': '65890b29', 'kuaishou.live.bfb1s': '3e261140b0cf7444a0ba411c6f227d88', 'clientid': '3'}}",
+]
 
-for i in lia:
-    r.lpush('ks_cookies', i)
+# for i in lia:
+#     r.lpush('ks_cookies', i)
