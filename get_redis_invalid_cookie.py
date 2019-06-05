@@ -6,7 +6,7 @@ r =redis.Redis(host="127.0.0.1", port=6379)
 num = r.llen('invalid_ks_cookies')
 
 for i in range(num):
-    res = r.rpoplpush('invalid_ks_cookies', 'invalid_ks_cookies').decode()
+    res = r.rpoplpush('ks_cookies', 'ks_cookies').decode()
     print(res)
 
 lia = [
